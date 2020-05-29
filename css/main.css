@@ -1,0 +1,658 @@
+RESET CSS BEGIN
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-family: "Montserrat", sans-serif;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+/*RESET CSS END*/
+
+
+/*HELPER CLASS BEGIN*/
+
+img {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+.alignLeft {
+    float: left;
+}
+
+.alignRight {
+    float: right;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.margin-bottom-30 { 
+    margin-bottom: 30px;
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+p,
+ul li,
+ol li {
+    font-size: 16px;
+    line-height: 23px;   
+    margin: 0 0 20px 0;
+}
+
+ul li,
+ol li {
+    margin-bottom: 10px;
+}
+
+/*HELPER CLASS END*/
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.wrapper {
+    /* max-width: 1100px; */
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Navigation bar + header style */
+header {
+    background-color: transparent;
+    width: 100%;
+    position: relative;
+}
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    transform: translateY(-200%);
+    transition: 0.2s;
+    z-index: 5;
+}
+
+body.scroll header.sticky {
+    transform: translateY(0);
+}
+
+.nav-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    padding: 7px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-wrapper ul li {
+    display: inline-block;
+    padding: 0 10px;
+    margin-bottom: 0;
+}
+
+.nav-wrapper ul li a {
+    font-size: 17px;
+    line-height: 22px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    transition: 0.3s;
+}
+
+.nav-wrapper ul li a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+header .logo img {
+    max-width: 100px;
+}
+
+/* PArallax page styles */
+.cover-main {
+    background: linear-gradient(rgba(0, 0 , 0, 0.5), rgba(0, 0 , 0, 0.5)), url('../images/hero-bg.jpg') right bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+
+ul#scene {
+    /* margin-top: 100px; */
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ul#scene li.name {
+    font-size: 40px;
+    /* line-height: 45px; */
+    text-transform: uppercase;
+    color:white;
+    /* width: 100%; */
+}
+
+ul#scene li.title {
+    /* text-align: center; */
+    font-size: 40px;
+    /* line-height: 35px; */
+    color:white;
+    position: static !important;
+    /* width: 100%; */
+    /* margin-top: 60px; */
+}
+
+.btn {
+    position: static !important;
+    /* width: 100%; */
+    /* text-align: center; */
+    /* margin-top: 150px; */
+}
+
+.portfolio-btn,
+.contact-btn {
+    margin: 0 auto;
+    /* display: inline-block; */
+    padding: 10px 20px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.portfolio-btn:hover,
+.contact-btn:hover {
+    background: white;
+    color: black;
+}
+
+.portfolio-btn {
+    margin-right: 30px;
+}
+
+.contact-btn {
+    margin-left: 30px;
+}
+
+/* Paralla styles end */
+
+/* Masonry styles start*/
+
+.masonry-grid {
+    position: relative;
+}
+
+.grid {
+    margin: 0 auto;
+}
+
+.grid-item {
+    width: 450px;
+    margin-bottom: 10px;
+}
+
+.tall-img {
+    height: 680px;
+}
+
+h2.sub-title {
+    position: relative;
+    display: block;
+    margin: 70px auto;
+    text-align: center;
+    font-size: 35px;
+    line-height: 40px;
+}
+
+h2.sub-title::after {
+    display: block;
+    height: 2px;
+    background-color: #000;
+    content: " ";
+    width: 100px;
+    margin: 30px auto 0 auto;
+}
+/* Masonry styles ends */
+
+/* I Love drawing styles start */
+
+section.beating-heart {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/hero-bg.jpg') no-repeat right bottom / cover;
+    text-align: center;
+    height: 100vh;
+    padding: 50px 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.heart {
+    position: relative;
+    width: 150px;
+    margin: 0 50px;
+    animation-name: beating;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+section.beating-heart span {
+    font-size: 100px;
+    line-height: 105px;
+}
+
+section.beating-heart h2 {
+    margin-bottom: 30px;
+}
+
+section.beating-heart h2::after {
+    background: white;
+}
+
+@keyframes beating {
+    0%{
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.25);
+    }
+
+    25% {
+        transform: scale(1.15);
+    }
+
+    35% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* I Love drawing styles end */
+
+/* Slider styles starts */
+
+.slider-div h2 {
+    margin-bottom: 0;
+}
+
+.slider {
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.slide {
+    max-height: 300px;
+    padding: 15px
+}
+
+.slick-prev,
+.slick-next {
+    background: black;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+
+.slick-prev {
+    left: 0;
+}
+
+.slick-next {
+    right: 0;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background: black;
+}
+
+/* Slider styles end */
+
+/* Footer styles start */
+
+footer {
+    position: relative;
+    z-index: -2;
+    height: 150px;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+footer h1 {
+    position: fixed;
+    font-size: 20px;
+    line-height: 25px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 800px;
+    z-index: 1;
+}
+
+/* Footer styles end */
+
+/* Responsive styles */
+
+@media only screen and (max-width: 950px) {
+    section.beating-heart span {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .heart {
+        width: 50px;
+        margin: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+
+.menu-trigger {
+    background: url('../images/hamburger-icon.svg') no-repeat center / cover;
+    width: 35px;
+    height: 35px;
+    display: block;
+    z-index: 10;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+.main-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0; 
+    bottom: 0;
+    z-index: 10 ;
+    background: rgba(0,0,0,0.72);
+    display: none;
+}
+
+.main-overlay::after {
+    background: url('../images/close-icon.svg') no-repeat center / cover;
+    width: 35px;
+    height: 35px;
+    display: block;
+    content: "";
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 20;
+}
+
+.menu {
+    position: fixed;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     background: #131313;
+     width: 100%;
+     max-width: 300px;
+     z-index: 30;
+     transform: translate3d(-100%, 0, 0);
+     transition: 0.3s;
+}
+
+.nav-wrapper ul li {
+    display: block;
+    margin-top: 20px;
+    padding: 0;
+    padding-bottom: 20px
+}
+
+.nav-wrapper ul li a {
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.nav-wrapper ul li a:hover {
+    border-color: transparent;
+}
+
+body.menu-is-active .menu {
+    transform: translate3d(0, 0, 0);
+    display: block;
+    padding: 0 15px;
+}
+
+body.menu-is-active .main-overlay {
+    display: block;
+}
+
+body.menu-is-active .menu-trigger {
+    display: none;
+}
+}
+
+@media only screen and (max-width: 568px) {
+    ul#scene li.name {
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    ul#scene li.title {
+        font-size: 20px;
+        line-height: 25px;
+        margin-top: 40px;
+    }
+
+    .btn {
+        margin-top: 80px;
+    }
+
+    ul#scene {
+        margin-top: 50px;
+    }
+
+    .portfolio-btn,
+    .contact-btn {
+        display: block;
+        margin: 20px auto;
+        max-width: 120px;
+        font-size: 15px;
+        line-height: 20px;
+        padding: 10px 0;
+    }
+
+    h2.sub-title {
+        margin: 30px auto;
+        font-size: 23px;
+        line-height: 25px;
+    }
+
+    section.beating-heart {
+        height: initial;
+    }
+
+    footer {
+        height: 100px;
+    }
+
+    footer h1 {
+        font-size: 15px;
+        line-height: 20px;
+        bottom: 40px;
+    }
+
+    .grid-item {
+        width: initial;
+    }
+
+    .tall-img {
+        height: initial;
+    }
+
+    .menu {
+        max-width: 200px;
+    }
+}
